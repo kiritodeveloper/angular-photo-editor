@@ -59,8 +59,6 @@ var imagizerClient = (function () {
         var parser = document.createElement('a');
         parser.href = url;
 
-        console.log(url);
-
         return {
             scheme: parser.protocol,
             hostname: parser.host,
