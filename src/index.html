@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Photo Editor</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h3>Angular Photo Editor</h3>
+      <hr>
+      <div ng-controller="mainController as mainCtrl">
+        <div class="row">
+          <div class="col-md-2">
+            <label>
+              <p>No Filter</p>
+              <input type="radio" name="filter" value="0" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=0">
+            </label>
+            <label>
+              <p>Cool</p>
+              <input type="radio" name="filter" value="1" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=1">
+            </label>
+            <label>
+              <p>Warm</p>
+              <input type="radio" name="filter" value="3" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=3">
+            </label>
+            <label>
+              <p>Dry</p>
+              <input type="radio" name="filter" value="7" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=7">
+            </label>
+          </div>
+          <div class="col-md-8">
+            <img class="photo" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=700&filter={{ mainCtrl.filter }}" />
+          </div>
+          <div class="col-md-2">
+            <label>
+              <p>Fog</p>
+              <input type="radio" name="filter" value="12" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=12">
+            </label>
+            <label>
+              <p>Sleak</p>
+              <input type="radio" name="filter" value="4" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=4">
+            </label>
+            <label>
+              <p>Clean</p>
+              <input type="radio" name="filter" value="5" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=5">
+            </label>
+            <label>
+              <p>Black & White</p>
+              <input type="radio" name="filter" value="21" ng-model="mainCtrl.filter" ng-click="mainCtrl.changeFilter(mainCtrl.filter)"/>
+              <img class="filters" data-src="https://images.unsplash.com/photo-1463194537334-3940784aa69a?width=100&filter=21">
+            </label>
+          </div>
+        </div>
+      </div>
+      <h4 class="text-center">Created with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="http://tommygaessler.com" target="_blank">Tommy Gaessler</a> using the <a href="http://demo.nventify.com/doc/" target="_blank">Imagizer API</a> by <a href="http://nventify.com" target="_blank">Nventify</a></h4>
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="/js/imagizer.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Specify your imagizer hostname
+
+        // Optionally, enable Auto device pixel ratio setting.
+        // Device pixel ratio will now be detected
+        // and automatically applied to image urls
+        // http://demo.imagizercdn.com/doc/#dpr-device-pixel-ratio
+        imagizerClient.config.autoDpr = true;
+
+        // Optionally, compress our images by setting the global quality
+        // http://demo.imagizercdn.com/doc/#quality
+        imagizerClient.config.quality = 100;
+
+        // Load images from specified selector
+        //  use "img" for all img tags
+        imagizerClient.loadImages("img");
+      });
+    </script>
+
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- main component -->
+    <script type="text/javascript" src="js/components/main/main.controller.js"></script>
+  </body>
+</html>

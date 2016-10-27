@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+  font-family: "Inconsolata";
+  box-sizing: border-box;
+  color: #999;
+}
+
+a {
+  text-decoration: underline;
+  color: #999;
+}
+
+a:link {
+  color: #999;
+}
+
+a:active {
+  color: #999;
+}
+
+a:visited {
+  color: #999;
+}
+
+a:focus {
+  color: #999;
+}
+
+a:hover {
+  color: black;
+}
+
+.photo {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.filters {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+label {
+  position: relative;
+}
+
+label p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  color: white;
+}
+
+label > input {
+  visibility: hidden;
+  position: absolute;
+}
+label > input + img {
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img {
+  border:2px solid #000;
+}
+
+h4 {
+  color: #999;
+  margin-top: 20px;
+}
+
+.fa-heart-o {
+  color: red;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  label {
+    width: 23%;
+  }
+
+  .col-md-2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .filters {
+    width: 100%;
+    display: inline;
+    margin: 0;
+  }
+}
