@@ -1,6 +1,6 @@
 var DEFAULT_QUALITY = 90;
 var DEFAULT_DPR = 1;
-var DEFAULT_IMAGIZER_HOST = "demo.imagizercdn.com";
+var DEFAULT_IMAGIZER_HOST = "http://tommygaessler.com/angular-photo-editor/";
 var DEFAULT_RESPONSIVE_SIZE = "100vw";
 
 var ATTRIBUTE_NAMES = {
