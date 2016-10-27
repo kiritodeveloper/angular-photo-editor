@@ -73,20 +73,13 @@
     <script src="/js/imagizer.js"></script>
     <script>
       $(document).ready(function() {
-        // Specify your imagizer hostname
 
-        // Optionally, enable Auto device pixel ratio setting.
-        // Device pixel ratio will now be detected
-        // and automatically applied to image urls
-        // http://demo.imagizercdn.com/doc/#dpr-device-pixel-ratio
+        imagizerClient.config.imagizerHost = "http://tommygaessler.com/angular-photo-editor/";
+
         imagizerClient.config.autoDpr = true;
 
-        // Optionally, compress our images by setting the global quality
-        // http://demo.imagizercdn.com/doc/#quality
         imagizerClient.config.quality = 100;
 
-        // Load images from specified selector
-        //  use "img" for all img tags
         imagizerClient.loadImages("img");
       });
     </script>
