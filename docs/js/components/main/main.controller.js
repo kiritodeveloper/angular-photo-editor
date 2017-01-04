@@ -17,7 +17,7 @@
 
       this.filter = filter;
 
-      imagizerClient.config.imagizerHost = "tommygaessler.com";
+      imagizerClient.config.imagizerHost = "tommygaessler.nventify.com";
 
       imagizerClient.config.autoDpr = true;
 
