@@ -72,15 +72,24 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
     <script src="js/imagizer.js"></script>
+    <script src="dist/imagizer.min.js"></script>
     <script>
-      $(document).ready(function() {
+      // Specify your imagizer hostname
+      imagizerClient.config.imagizerHost = "tommygaessler.com";
 
-        imagizerClient.config.autoDpr = true;
+      // Optionally, enable Auto device pixel ratio setting.
+      // Device pixel ratio will now be detected
+      // and automatically applied to image urls
+      // http://demo.imagizercdn.com/doc/#dpr-device-pixel-ratio
+      imagizerClient.config.autoDpr = true;
 
-        imagizerClient.config.quality = 100;
+      // Optionally, compress our images by setting the global quality
+      // http://demo.imagizercdn.com/doc/#quality
+      imagizerClient.config.quality = 60;
 
-        imagizerClient.loadImages("img");
-      });
+      // Load images from specified selector
+      //  use "img" for all img tags
+      imagizerClient.loadImages("img");
     </script>
 
 

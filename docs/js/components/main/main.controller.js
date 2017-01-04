@@ -17,9 +17,12 @@
 
       this.filter = filter;
 
+      imagizerClient.config.imagizerHost = "tommygaessler.com";
+
       imagizerClient.config.autoDpr = true;
 
-      imagizerClient.config.quality = 100;
+      imagizerClient.config.quality = 60;
+
 
       imagizerClient.loadImages("img");
     }
